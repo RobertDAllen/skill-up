@@ -3,8 +3,9 @@
 #Workout
 
 %h3= @workout.date 
+%h4= @workout.category 
 %h4= @workout.workout
-%h4= @workout.duration + " minutes"
+%h4= @workout.duration 
 %br/
 = link_to "Back", root_path 
 = link_to "Edit", edit_workout_path(@workout)

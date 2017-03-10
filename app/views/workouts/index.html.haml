@@ -1,6 +1,5 @@
 %h1 Workout Index page
 
-%p= link_to "New", root_path
 
 - @workouts.each do |workout| 
     %h3= link_to workout.date, workout
