@@ -2,7 +2,7 @@
 
 #Workout
 
-%h3= @workout.date 
+%h3= @workout.date.strftime("%A %B %d")
 %h4= @workout.category 
 %h4= @workout.workout
 %h4= @workout.duration 
