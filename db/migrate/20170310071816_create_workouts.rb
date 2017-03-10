@@ -4,8 +4,6 @@ class CreateWorkouts < ActiveRecord::Migration
       t.datetime :date
       t.string :workout
       t.string :duration
-      t.belongs_to :user
-      t.has_one :skill
 
       t.timestamps null: false
     end
