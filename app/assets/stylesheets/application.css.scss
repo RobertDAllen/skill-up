@@ -13,5 +13,30 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap-sprockets";
+//@import "bootstrap-sprockets";
 @import "bootstrap";
+
+html {
+    height: 100%;
+}
+
+.navbar-default {
+    -webkit-box-shadow: 0 3px 4px 1px rgba(0,0,0,.7);
+    box-shadow: 0 3px 4px 1px rgba(0,0,0,.2);
+}
+
+body {
+    background: #fc00ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #fc00ff , #00dbde); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #fc00ff , #00dbde); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+}
+
+#index_workouts {
+    h3 {
+        margin-bottom: 0;
+        font-weight: 100;
+    a { color: white;
+    }
+    }
+}

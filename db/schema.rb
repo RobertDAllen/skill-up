@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20170310215853) do
 
   create_table "skillsets", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name", null: false
     t.string   "group"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
