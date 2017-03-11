@@ -5,9 +5,7 @@
 %h3= @workout.date.strftime("%A %B %d")
 %h4= @workout.category 
 %h4= @workout.workout
-%h4= @workout.duration 
-%h5= @workout.category
-%h5= @workout.skillsets_id
+%h4= @workout.duration
 %br/
 = link_to "Back", root_path 
 = link_to "Edit", edit_workout_path(@workout)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170310215853) do
+ActiveRecord::Schema.define(version: 20170311064249) do
 
   create_table "skillsets", force: :cascade do |t|
     t.string   "name"
@@ -24,10 +24,9 @@ ActiveRecord::Schema.define(version: 20170310215853) do
     t.datetime "date"
     t.string   "workout"
     t.integer  "duration"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "category"
-    t.integer  "skillsets_id"
   end
 
 end
