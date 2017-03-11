@@ -1,7 +1,12 @@
 
 = simple_form_for(@workout, html: { class: 'form-horizontal' }) do |f|
     = f.input :date, label: "Date"
-    = f.select :category, ['Cooking', 'Dancing', 'Programming', 'Writing'], label: "Which category?", input_html: { class: "form-control" }
+    //= f.select( :skillsets_id, Skillset.all, :id, :name) label "Skillset?", input_html: { class: "form-control" }
+    //= f.select( :skillsets_id, skillsets, :id, :name )
+    //= f.select :skillsets_id, { class: "form-control" }
+    %label= "Which category?"
+    = collection_select :category , @skillsets, Skillset.all, :id, :name, prompt: true, html: { class:"form-control" }
+    //= f.select :category, ['Cooking', 'Dancing', 'Programming', 'Writing'], label: "Which category?", input_html: { class: "form-control" }
     = f.input :workout, label: "What did you do?", input_html: { class: "form-control" }
     = f.input :duration, as: :integer, label: "For how many minutes?", input_html: { class: "form-control" }
     %br/
