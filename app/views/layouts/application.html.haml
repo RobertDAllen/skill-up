@@ -7,16 +7,17 @@
   = csrf_meta_tags 
 %body
   %nav.navbar.navbar-default
-    .container
+    .container.navbar-container
       .navbar-header
-        = link_to "Scorekeeping Log", root_path, class: "navbar-brand"
-      .nav.navbar-nav.navbar-center
-        = link_to "New Entry", new_workout_path, class: "navbar navbar-link"
-      .nav.navbar-nav.navbar-right
-        = link_to "New Skillset", new_skillset_path, class: "navbar navbar-link"
+        = link_to "Skill Up Log", root_path, class: "navbar-brand"
+      .navbar-header
+        = link_to "New Activity", new_workout_path, class: "navbar-brand"
+      .navbar-header
+        = link_to "New Skillset", new_skillset_path, class: "navbar-brand"
+
       
 
-%div{:class => "well col-md-4 center container col-sm-offset-4" }
+%div{:class => "well well-lg col-md-6 center body-container" }
 
   = yield
 
