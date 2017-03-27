@@ -1,13 +1,21 @@
-%h1 Your Activity
+%h2= @workout.workout
 
 #Workout
 
-%h3= @workout.date.strftime("%A %B %d")
-%h4= @workout.category 
-%h4= @workout.workout
-%h4= @workout.duration
-
+%h3 
+    Great job with your #{@workout.duration} minute 
+    %i= @workout.workout 
+    activity.
+%h4 
+    You upped your 
+    %b= @workout.category 
+    game on #{@workout.date.strftime("%A %B %d")}
 %br/
-= link_to "Back", root_path 
-= link_to "Edit", edit_workout_path(@workout)
-= link_to "Delete", workout_path(@workout), method: :delete, data: {confirm: "Delete for real?"}
+%br/
+%br/
+%br/
+.btn-group{:role => "group"}
+    = link_to root_path
+    %button.btn.btn-info{:style => "text-decoration:none;", :type => "button"} Back
+    %button.btn.btn-warning{:style => "color:white;", :type => "button"}= link_to 'Edit', edit_workout_path(@workout)
+    %button.btn.btn-danger{:style => "color:white;", :type => "button"}= link_to 'Delete', workout_path(@workout), method: :delete, data: {confirm: "Delete for real?"}
