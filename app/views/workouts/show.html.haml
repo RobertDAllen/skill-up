@@ -13,9 +13,7 @@
 %br/
 %br/
 %br/
+= link_to "Back", root_path 
+= link_to "Edit", edit_workout_path(@workout)
+= link_to "Delete", workout_path(@workout), method: :delete, data: {confirm: "Delete for real?"}
 %br/
-.btn-group{:role => "group"}
-    = link_to root_path
-    %button.btn.btn-info{:style => "text-decoration:none;", :type => "button"} Back
-    %button.btn.btn-warning{:style => "color:white;", :type => "button"}= link_to 'Edit', edit_workout_path(@workout)
-    %button.btn.btn-danger{:style => "color:white;", :type => "button"}= link_to 'Delete', workout_path(@workout), method: :delete, data: {confirm: "Delete for real?"}
