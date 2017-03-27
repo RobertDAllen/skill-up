@@ -1,3 +1,3 @@
 class Workout < ActiveRecord::Base
-    has_many :skillsets
+    has_one :skillset
 end
