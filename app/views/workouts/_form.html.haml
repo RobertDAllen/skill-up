@@ -1,8 +1,11 @@
 
 = simple_form_for(@workout, html: { class: 'form-horizontal' }) do |f|
     = f.input :date, label: "Date"
-    %label= "Which category?"
-    = collection_select :workout, :category, Skillset.order(:name), :name, :name, prompt: true, html: { class:"form-control" }
+    //%label= "Which category?"
+    //= collection_select :workout, :category, Skillset.order(:name), :name, :name, prompt: true, html: { class:"form-control" }
+    //= f.select(:category, options_for_select(Skillset.order(:name).map(&:name)), prompt: true, required: true)
+    //= f.input :category, data: {autocomplete_source: Skillset.order(:name).map(&:name)}, label: "Which category?", input_html: { class: "form-control" }
+    = f.input :category, label: "Which category?", input_html: { class: "form-control" }
     = f.input :workout, label: "What did you do?", input_html: { class: "form-control" }
     = f.input :duration, as: :integer, label: "For how many minutes?", input_html: { class: "form-control" }
     %br/

@@ -1,6 +1,10 @@
 %h1 Skill Up Scorekeeping
 
-- @workouts.each do |workout| 
-    %h3= link_to workout.workout, workout
-    %h4= workout.category 
-    %h4= "#{ workout.duration } points"
+.row
+    .col-xs-12.col-md-8
+        - @workouts.each do |workout| 
+            %h3= link_to workout.workout, workout
+            %h4= workout.category 
+            %h4= "#{ workout.duration } points"
+    .col-xs-6.col-md-4
+        %h3= render 'categories'
