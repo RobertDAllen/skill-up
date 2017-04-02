@@ -11,22 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170311153419) do
+ActiveRecord::Schema.define(version: 20170402163914) do
 
   create_table "skillsets", force: :cascade do |t|
     t.string   "name"
-    t.string   "group"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "workouts", force: :cascade do |t|
     t.datetime "date"
-    t.string   "workout"
-    t.integer  "duration"
+    t.string   "name"
+    t.integer  "points"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "category"
     t.integer  "skillset_id"
   end
 
