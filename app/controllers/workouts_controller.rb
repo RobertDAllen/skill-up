@@ -3,14 +3,14 @@ class WorkoutsController < ApplicationController
     def index
         @workouts = Workout.all.order("created_at DESC")
     end
-    
+
     def show
     end
-    
+
     def new
         @workout = Workout.new
     end
-    
+
     def create
         @workout = Workout.new(workout_params)
         if @workout.save
@@ -30,19 +30,19 @@ class WorkoutsController < ApplicationController
             render 'edit'
         end
     end
-    
+
     def destroy
         @workout.destroy
         redirect_to root_path
     end
-    
-    
+
+
     private
-    
+
     def workout_params
-        params.require(:workout).permit(:date, :category, :workout, :duration, :skillset_id, :name)
+        params.require(:workout).permit(:date, :name, :points, :skillset_id)
     end
-    
+
     def find_workout
         @workout = Workout.find(params[:id])
     end
