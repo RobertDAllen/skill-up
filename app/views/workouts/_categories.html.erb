@@ -4,3 +4,10 @@
 <%= p.total_points %> 
 <br>
 <% end %>
+
+<h3>Levels</h3>
+<% Skillset.all.each do |p| %>
+<%= p.name %> 
+<%= p.levels %> 
+<br>
+<% end %>
