@@ -1,4 +1,13 @@
-<h3>Categories</h3>
-<% Workout.select("DISTINCT(CATEGORY)").each do |p| %>
-<%= p.category %><br>
+<h3>Total Points</h3>
+<% Skillset.all.each do |p| %>
+<%= p.name %> 
+<%= p.total_points %> 
+<br>
+<% end %>
+
+<h3>Levels</h3>
+<% Skillset.all.each do |p| %>
+<%= p.name %> 
+<%= p.levels %> 
+<br>
 <% end %>
