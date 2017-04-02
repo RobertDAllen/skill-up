@@ -8,7 +8,7 @@
     activity.
 %h4 
     You upped your 
-    %b= @workout.skillset.name
+    %b= @workout.skillset.name if @workout.skillset
     game on #{@workout.date.strftime("%A %B %d")}
 %br/
 %br/
