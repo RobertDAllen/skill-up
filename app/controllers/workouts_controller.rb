@@ -12,8 +12,6 @@ class WorkoutsController < ApplicationController
     end
 
     def create
-        puts "------------------"
-        puts workout_params['skillset_id']
         @workout = Workout.new(workout_params)
         if @workout.save
             redirect_to @workout
