@@ -1,4 +1,4 @@
 class Skillset < ActiveRecord::Base
-  has_many :workouts
-
+    has_many :workouts
+    validates_presence_of :name
 end

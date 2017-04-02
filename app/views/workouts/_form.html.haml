@@ -2,8 +2,8 @@
 = simple_form_for(@workout, html: { class: 'form-horizontal' }) do |f|
     = f.input :date, label: "Date"
     = f.association :skillset
-    = f.input :name, required: true, label: "What did you do?", input_html: { class: "form-control" }
-    = f.input :points, as: :integer, required: true, label: "For how many minutes?", input_html: { class: "form-control" }
+    = f.input :name, label: "What did you do?", input_html: { class: "form-control" }
+    = f.input :points, as: :integer, label: "For how many minutes?", input_html: { class: "form-control" }
     %br/
     = f.button :submit
     %br/

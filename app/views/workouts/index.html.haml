@@ -4,7 +4,7 @@
     .col-xs-12.col-md-8
         - @workouts.each do |workout| 
             %h3= link_to workout.name, workout
-            %h4= workout.skillset_id 
+            %h4= workout.skillset.name if workout.skillset
             %h4= "#{ workout.points } points"
     .col-xs-6.col-md-4
         %h3= render 'categories'
