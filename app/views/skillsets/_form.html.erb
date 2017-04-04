@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-xs-12 col-md-8">
+        <%= simple_form_for(@skillset, html: { class: 'form-horizontal' }) do |f| %>
+            <%= f.input :name, label: "What new category do you want to add?", input_html: { class: "form-control" } %>
+            <br/>
+            <%= f.button :submit %>
+            <br/>
+            <br/>
+            <%= link_to "Cancel", root_path  %>
+        <% end %>
+    </div>
+    <div class="col-xs-6 col-md-4">
+        <h3>Current Skillsets</h3>
+            <% Skillset.all.each do |p| %>
+            <%= link_to p.name, p %> <br/>
+            <% end %>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<h1>Your Skill</h1>
+<div id="Skillset">
+    <h3><%= @skillset.name %></h3>
+    <br/>
+    <%= link_to "Back", root_path  %>
+    <%= link_to "Edit", edit_skillset_path(@skillset) %>
+    <%= link_to "Delete", skillset_path(@skillset), method: :delete, data: {confirm: "Delete for real?"}  %>
+</div>
+<br/>

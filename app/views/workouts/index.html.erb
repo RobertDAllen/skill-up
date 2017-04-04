@@ -2,20 +2,12 @@
 <div class="row">
   <div class="col-xs-12 col-md-8">
     <% @workouts.each do |workout|  %>
-      <h3>
-        <%= link_to workout.name, workout %>
-      </h3>
-      <h4>
-        <%= workout.skillset.name  %>
-      </h4>
-      <h4>
-        <%= "#{ workout.points } points" %>
-      </h4>
+      <h3><%= link_to workout.name, workout %></h3>
+      <h4><%= workout.skillset.name  %></h4>
+      <h4><%= "#{ workout.points } points" %></h4>
     <% end %>
   </div>
   <div class="col-xs-6 col-md-4">
-    <h3>
-      <%= render 'categories' %>
-    </h3>
+    <h3><%= render 'categories' %></h3>
   </div>
 </div>
