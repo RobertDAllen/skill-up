@@ -1,7 +1,7 @@
 class SkillsetsController < ApplicationController
     before_action :find_skillset, only: [:show, :edit, :update, :destroy]
     def index
-        @skillsets = Skillset.all.order("name DESC")
+        @skillsets = Skillset.all.order("name ASC")
     end
 
     def show
