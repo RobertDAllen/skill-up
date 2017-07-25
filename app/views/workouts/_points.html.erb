@@ -1,12 +1,12 @@
 <h3>Total Points</h3>
-<% Skillset.all.each do |p| %>
+<% Skillset.all.sort_by{|skillset|skillset.total_points}.reverse.each do |p| %>
 <%= p.name %> 
 <%= p.total_points %> 
 <br>
 <% end %>
 
 <h3>Levels</h3>
-<% Skillset.all.each do |p| %>
+<% Skillset.all.sort_by{|skillset|skillset.total_points}.reverse.each do |p| %>
 <%= p.name  %> level 
 <%= p.levels %> !!
 <br>
