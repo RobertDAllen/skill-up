@@ -11,4 +11,5 @@ VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
             format: {with: VALID_EMAIL_REGEX },
             length: { maximum: 100 }
     validates :name, presence: true
+    has_secure_password
 end
