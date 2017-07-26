@@ -7,6 +7,6 @@ class Skillset < ActiveRecord::Base
         return workouts.sum("points")
     end
     def levels 
-        return (total_points / 60 ).to_i
+        return (total_points / 60 ).to_i 
     end
 end
